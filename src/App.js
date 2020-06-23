@@ -9,6 +9,10 @@ class App extends React.Component {
     return (
       <>
         <div className="background">
+          <div className="background-massage">
+            <p>我が子の笑顔のために</p>
+            <p>ペット保険　<span>あにまる</span></p>
+          </div>
           <img src={Dog} />
         </div>
         <div className="top-sp"></div>
