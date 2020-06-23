@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../style/topItem.css';
 
 
 export default class TopItem extends Component {
@@ -9,7 +10,13 @@ export default class TopItem extends Component {
   render() {
     return (
       <div className="container">
-        <h1>{this.props.title}</h1>
+        <h1>選ばれる <span>3</span>つのポイント</h1>
+
+        <div className="point">
+          <div className="point--items"></div>
+          <div className="point--items"></div>
+          <div className="point--items"></div>
+        </div>
       </div>
     );
   }
