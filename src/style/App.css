@@ -1,14 +1,8 @@
-
 #root {
   text-align: center;
   height: 100vh;
   overflow: scroll;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .background {
@@ -19,20 +13,50 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
-  z-index: -1;
+  z-index: -2;
 }
 
 .background-massage {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  margin: auto;
-  height: 30%;
+  margin: 0 auto;
+  display: inline-block;
   line-height: 1;
-  
+  padding-top: 20vh;
+  position: relative;
 }
+
+.background-massage p {
+  font-size: 4vh;
+  margin: 0;
+}
+
+.background-massage p:nth-child(2) {
+  position: relative;
+  display: inline-block;
+  background-color: gold;
+  color: rgb(52, 52, 53);
+  margin: 3vh auto 0;
+  padding: 1vh 8vh;
+  font-size: 3vh;
+  border-top: 3px dotted blue;
+  border-bottom: 3px dotted blue;
+}
+
+
+.background-massage p:nth-child(3) {
+  position: absolute;
+    left: -20vh;
+    right: 0;
+    bottom: -20vh;
+  font-family: 'Titan One', cursive;
+  color: rgba(245, 81, 231, 0.89);
+  font-size: 20vh;
+  text-shadow: 1vh 1vh rgba(255, 255, 0, 0.856);
+}
+
+.background-massage p:nth-child(3):first-letter{
+  font-size: 25vh;
+}
+
 
 .background img {
   position: absolute;
@@ -40,7 +64,8 @@
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  width: 80%;
+  width: 95%;
+  z-index: -1;
 }
 
 .top-sp {
@@ -48,7 +73,6 @@
   width: 100%;
 }
 
-.container {
-  background-color: red;
-  height: 100vh;
+.main {
+  padding: 0 10px;
 }
