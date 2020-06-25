@@ -2,7 +2,7 @@
   text-align: center;
   height: 100vh;
   overflow: scroll;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'M PLUS 1p', sans-serif;
 }
 
 .background {
@@ -26,6 +26,7 @@
 
 .background-massage p {
   font-size: 4vh;
+  font-weight: 700;
   margin: 0;
 }
 
@@ -48,7 +49,7 @@
     right: 0;
     bottom: -20vh;
   font-family: 'Titan One', cursive;
-  color: rgba(245, 81, 231, 0.89);
+  color: rgba(247, 95, 234, 0.89);
   font-size: 20vh;
   text-shadow: 1vh 1vh rgba(255, 255, 0, 0.856);
 }

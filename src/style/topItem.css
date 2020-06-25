@@ -1,17 +1,17 @@
 .container {
   background-color: white;
   height: 100vh;
-  padding: 8vh 0;
+  padding: 5vh 0;
 }
 
-h1{
+.container--items h1{
   margin: 0;
   color: white;
   font-size: 5vh;
   position: relative;
   z-index: 1;
 }
-h1::before {
+.container--items h1::before {
   position: absolute;
   content: "";
    left: 0;
@@ -22,7 +22,18 @@ h1::before {
   z-index: -1;
 }
 
-h1 > span {
+.container--items h1 > span {
   font-size: 10vh;
   color: yellow;
+}
+
+.background {
+  height: 90%;
+  width: 100%;
+  background-image: url(../image/background.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  z-index: -2;
 }
