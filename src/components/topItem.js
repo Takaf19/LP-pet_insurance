@@ -10,12 +10,24 @@ export default class TopItem extends Component {
   render() {
     return (
       <div className="container">
-        <h1>選ばれる <span>3</span>つのポイント</h1>
+        <div className="container__massage">
+          <h1>大切な家族の<span>"万が一"</span>に備える</h1>
+          <div className="container__massage--coments">
+            <p>私たち人間と同じように、動物にもケガや病気のリスクがあります。</p>
+            <p>公的健康保険制度のないペットの診療費は高額になるケースも少なくありません。</p>
+            <p>大切なわが子の”万が一”に備えられるのが、ペット保険の大きなメリットです。</p>
+          </div>
+          <div className="container__massage--imgbox"></div>
+        </div>
 
-        <div className="point">
-          <div className="point--items"></div>
-          <div className="point--items"></div>
-          <div className="point--items"></div>
+        <div className="container--items">
+          <h1>選ばれる <span>3</span>つのポイント!</h1>
+
+          <div className="point">
+            <div className="point--item"></div>
+            <div className="point--item"></div>
+            <div className="point--item"></div>
+          </div>
         </div>
       </div>
     );
