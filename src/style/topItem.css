@@ -3,8 +3,14 @@
   padding: 5vh 0;
 }
 
+.container-item {
+  margin: 10vh 0;
+}
+
 .container__massage {
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2vh 0;
 }
 
 .container__massage h1 {
@@ -45,16 +51,12 @@
   background-size: 90% 100%;
   margin-left: 5%;
   transform: skewX(-10deg) scale(1.2); 
-  /* transform-origin: bottom right; */
-
 }
 
-/* 選ばれるポイント */
 .container__massage--coments {
   margin: 0 auto;
   width: 50%;
 }
-
 
 .container__massage--coments p {
   text-align: left;
@@ -62,6 +64,8 @@
   font-size: 1.5vw;
 }
 
+
+/* 選ばれるポイント */
 .container--items h1{
   margin: 0;
   font-size: 5vh;
@@ -82,4 +86,15 @@
 .container--items h1 > span {
   font-size: 10vh;
   color: yellow;
+}
+
+.point {
+  display: flex;
+  justify-content: space-between;
+}
+
+.point--item {
+  width: calc(100% / 3);
+  margin: 5px;
+  background: white;
 }
