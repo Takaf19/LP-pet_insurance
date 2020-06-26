@@ -13,7 +13,7 @@ class App extends React.Component {
         </div>
         <div className="top-sp">
           <div className="background-massage">
-              <p>我が子の笑顔のために。</p>
+              <p>わが子の未来のために。</p>
               <p>ペット保険は</p>
               <p>AniLIFE</p>
           </div>

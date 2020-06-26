@@ -50,6 +50,20 @@ export default class TopItem extends Component {
             </div>
           </div>
         </div>
+
+        <div className="container-item container--product">
+          <h1>我が子に合わせて選べる <span>2</span>つの商品</h1>
+          <div className="product">
+            <div className="product-item" id="product1">
+              <p>幅広い補償で万全サポート</p>
+              <h1>Animal</h1>
+            </div>
+            <div className="product-item" id="product2">
+              <p>高額な手術に備えて</p>
+              <h1>Animal Light</h1>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
