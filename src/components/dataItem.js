@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
-import '../style/topItem.css';
+import '../style/dataItem.css';
 
 
-export default class TopItem extends Component {
+export default class Dataitem extends Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
-      <div className="container">
+      <div className="data-item">
         <div className="container-item container__massage">
-          <h1>大切な家族の<span>"万が一"</span>に備える</h1>
+          <div className="data-item--title">
+            <p>2頭に1頭が</p>
+            <p>加入後１年以内に保険を利用</p>
+          </div>
           <div className="container__massage--main">
-            <div className="container__massage--imgbox"></div>
             <div className="container__massage--coments">
-              <p>私たち人間と同じように、動物にもケガや病気のリスクがあります。</p>
-              <p>公的健康保険制度のないペットの診療費は"全額自己負担"となります。</p>
-              <p>料金は動物病院によって決められているため、想定外に治療費が高額になるケースも少なくありません。</p>
+              <p>Animalの保険に新たに加入したペットが</p>
+              <p>１年以内に保険金を請求する割合は約60%。</p>
+              <p>元気いっぱいのワンちゃん、ネコちゃんでも怪我や病気に注意が必要です。</p>
               <p>大切なわが子の<span>”万が一”</span>に備えられるのが、ペット保険の大きなメリットです。</p>
             </div>
+            <div className="container__massage--imgbox"></div>
           </div>
         </div>
 

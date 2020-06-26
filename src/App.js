@@ -2,6 +2,7 @@ import React from 'react';
 import './style/App.css';
 import Dog from './image/dog.png'
 import TopItem from './components/topItem';
+import DataItem from './components/dataItem';
 
 // Appクラスを定義してください
 class App extends React.Component {
@@ -19,7 +20,8 @@ class App extends React.Component {
           </div>
         </div>
         <div className="main">
-          <TopItem title={"aaa"}></TopItem>
+          <TopItem></TopItem>
+          <DataItem></DataItem>
         </div>
 
       </>
