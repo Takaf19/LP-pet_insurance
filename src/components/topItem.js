@@ -58,7 +58,7 @@ export default class TopItem extends Component {
               <p>幅広い補償で万全サポート</p>
               <h1>Animal</h1>
               <div className="plan">
-                <span>通院</span>+<span>入院</span>+<span>手術</span>
+                <span>手術</span>+<span>入院</span>+<span>通院</span>
               </div>
               <ul>
                 <li>
@@ -80,8 +80,7 @@ export default class TopItem extends Component {
               <p>高額な手術に備えて</p>
               <h1>Animal Light</h1>
               <div className="plan">
-                <span>手術</span>+<span>※入院</span>
-                <p>※手術を含む連続した入院が対象です。</p>
+                <span>手術</span>+<span>入院</span>
               </div>
               <ul>
                 <li>
