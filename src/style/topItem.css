@@ -4,7 +4,7 @@
 }
 
 h1 {
-  font-size: 4vw;
+  font-size: 3.5vw;
 }
 
 .container-item {
@@ -106,6 +106,9 @@ h1 {
 
 
 /* 選べる商品 */
+.container--product {
+ background: red;
+}
 .container--product > h1 {
   margin: 0;
   position: relative;
@@ -128,3 +131,65 @@ h1 {
   transform: skewX(-10deg);
   color: yellow;
 }
+
+.product {
+  background: yellow;
+  margin-top: 5vw;
+  display: flex;
+  justify-content: center;
+}
+
+.product-item {
+  width: 45%;
+  padding: 3vw 1vw;
+  background: white;
+}
+
+.product-item > h1,.product-item > p {
+  margin: 0;
+}
+
+.product-item > p {
+  font-size: 2vw;
+  font-weight: 600;
+  line-height: 1;
+}
+.product-item > h1 {
+  font-size: 5vw;
+  font-family: 'Titan One', cursive;
+  font-weight: 400;
+  line-height: 1;
+}
+.product-item > h1:first-letter{
+  font-size: 8vw;
+}
+
+.plan{
+  font-weight: 600;
+  font-size: 2vw;
+}
+
+.plan > span {
+  display: inline-block;
+  width: 20%;
+  margin: 5px;
+}
+
+.product-item > ul {
+  text-align: left;
+}
+  /* 左のボックス */
+  #product1 {
+    border-right: dashed 3px gray;
+  }
+
+  #product1 > h1 {
+    color: rgb(8, 136, 241);
+    text-shadow: 0.5vw 0.5vw rgba(240, 139, 206, 0.856);
+  }
+
+  /* 右のボックス */
+  #product2 > h1 {
+    color: rgb(255, 196, 0);
+    text-shadow: 0.5vw 0.5vw rgba(5, 71, 252, 0.856);
+  }
