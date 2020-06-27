@@ -13,7 +13,7 @@ export default class Dataitem extends Component {
         <div className="data-item-item data-item__massage">
           <div className="data-item--title">
             <p>2頭に1頭が</p>
-            <p>加入後１年以内に保険を利用</p>
+            <p>加入後<span>1年以内</span>に保険を利用！！</p>
           </div>
           <div className="data-item__massage--main">
             <div className="data-item__massage--coments">
@@ -23,7 +23,11 @@ export default class Dataitem extends Component {
               <img src= { run } />
             </div>
             <div className="data-item__massage--imgbox">
+              <div className="back-graph"></div>
               <div className="pie"></div>
+              <div className="pie-percent">
+                  <span>65%</span>
+              </div>
             </div>
           </div>
         </div>

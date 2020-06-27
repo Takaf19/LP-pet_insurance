@@ -13,19 +13,44 @@ h1 {
 .data-item__massage {
   overflow: hidden;
   background: rgb(255, 255, 255);
-  padding: 2vw;
   border-radius: 10px;
 }
 
-.data-item__massage h1 {
-  margin-bottom: 5vw;
+.data-item--title {
+  margin-bottom: 2vw;
+  padding: 2.5vw 0;
   font-size: 3vw;
+  font-weight: 800;
+  background: rgb(133, 133, 241);
+  color: white;
+  position: relative;
+}
+
+.data-item--title::after {
+  content: "";
+  position: absolute;
+   top: 10%;
+   left: 0;
+   right: 0;
+   bottom: 10%;
+  border-top: dotted 0.5vw pink;
+  border-bottom: dotted 0.5vw pink;
+}
+
+.data-item--title > p {
+  margin: 0;
+}
+
+.data-item--title p:nth-child(2) > span {
+  color: yellow;
+  font-size: 4vw;
 }
 
 .data-item__massage--main {
   display: flex;
   justify-content: space-between;
   height: 30vw;
+  padding: 2vw 3vw;
 }
 
 .data-item__massage--coments {
@@ -44,36 +69,118 @@ h1 {
   position: absolute;
     bottom: 0;
     left: 0;
+  width: 70%;
 }
 
 .data-item__massage--imgbox {
-  background: red;
   width: 40%;
   height: 100%;
   position: relative;
+}
+
+.back-graph {
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  margin: auto;
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+  background: #1abc9c; 
 }
 
 .pie{
   position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
     right: 0;
-    margin: auto;
-  width: 100px;
-  height: 100px;
+    left: 0;
+  margin: auto;
+  width: 25vw;
+  height: 25vw;
   border-radius: 50%;
-  background: #1abc9c;
   background-image: linear-gradient(to right, transparent 50%, #fe8a01 0); 
+
 }
+
 .pie::before{ 
-  content: ''; 
+  content: '';
   display: block;
   margin-left: 50%;
   height: 100%;
   border-radius: 0 100% 100% 0 / 50%;
   background-color: inherit;
   transform-origin: left;
-  background: #fe8a01; /*ここで色をオレンジにする*/
-  transform: rotate(.1turn);
+  background: #1abc9c; 
+  -webkit-animation: rotate1 1s linear;
+  animation: rotate1 1s linear;
+  -webkit-animation-iteration-count:1;
+  animation-iteration-count:1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.pie::after{ 
+  content: ''; 
+  position: absolute;
+    top: 0;
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  width: 50%;
+  border-radius: 0 100% 100% 0 / 50%;
+  background-color: inherit;
+  transform-origin: left;
+  -webkit-animation: rotate2 .3s linear;
+  animation: rotate2 .3s linear;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+  -webkit-animation-iteration-count:1;
+  animation-iteration-count:1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.pie-percent {
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  margin: auto;
+  border-radius: 50%;
+  width: calc(25vw / 2);
+  height: calc(25vw / 2);
+  line-height: calc(25vw / 2);
+  font-weight: 800;
+  text-shadow: 0px 0px 5px 5px #1abc9c;
+  z-index: 1;
+  background: white;
+}
+
+.pie-percent > span {
+  font-size: 4vw;
+}
+
+@keyframes rotate1 {
+  50% {
+    transform: rotate(.25turn);
+  }
+  100% {
+    transform: rotate(.5turn);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+  }
+  50% {
+    background: #fe8a01; 
+  }
+  100% {
+    background: #fe8a01; 
+    transform: rotate(.1turn);
+  }
 }
