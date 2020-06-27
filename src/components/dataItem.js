@@ -30,36 +30,10 @@ export default class Dataitem extends Component {
               </div>
             </div>
           </div>
+          <span className="border"></span>
         </div>
 
-        <div className="data-item-item data-item--items">
-          <h1>選ばれる <span>3</span>つのポイント!</h1>
-          <div className="point">
-            <div className="point--item">
-              <div className="point-icon">
-
-              </div>
-              <p>１２歳まで新規加入OK!</p>
-              <p>年齢が不明な場合は、獣医師による推定年齢で加入OK</p>
-            </div>
-            <div className="point--item">
-              <div className="point-icon">
-
-              </div>
-              <p>手厚いサポート</p>
-              <p>歯科治療・先進治療・先天性の病気も保証の対象</p>
-            </div>
-            <div className="point--item">
-              <div className="point-icon">
-
-              </div>
-              <p>最短１ヶ月スタート</p>
-              <p>ご契約から最短１ヶ月で補償スタート</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="data-item-item data-item--product">
+        <div className="data-item--product">
           <h1>我が子に合わせて選べる <span>2</span>つの商品</h1>
           <div className="product">
             <div className="product-item" id="product1">

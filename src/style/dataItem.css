@@ -1,27 +1,31 @@
 .data-item {
-  padding: 5vh 0;
+  border-radius: 10px 10px 0 0;
+  background: rgb(255, 255, 255);
+  margin: 20vh 0;
 }
 
 h1 {
   font-size: 3.5vw;
 }
 
-.data-item-item {
-  margin: 10vh 0;
-}
-
 .data-item__massage {
   overflow: hidden;
-  background: rgb(255, 255, 255);
-  border-radius: 10px;
+}
+.border {
+  display: inline-block;
+  width: 90%;
+  height: 1px;
+  background: slategrey;
+  margin: 5vw 0 2vw;
 }
 
 .data-item--title {
-  margin-bottom: 2vw;
+  margin-bottom: 5vw;
   padding: 2.5vw 0;
   font-size: 3vw;
   font-weight: 800;
   background: rgb(133, 133, 241);
+  border-radius: 10px 10px 0 0;
   color: white;
   position: relative;
 }
@@ -67,7 +71,7 @@ h1 {
 
 .data-item__massage--coments > img {
   position: absolute;
-    bottom: 0;
+    bottom: -5%;
     left: 0;
   width: 70%;
 }
