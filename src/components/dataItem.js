@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../style/dataItem.css';
+import run from  '../image/run.png';
 
 
 export default class Dataitem extends Component {
@@ -9,23 +10,25 @@ export default class Dataitem extends Component {
   render() {
     return (
       <div className="data-item">
-        <div className="container-item container__massage">
+        <div className="data-item-item data-item__massage">
           <div className="data-item--title">
             <p>2頭に1頭が</p>
             <p>加入後１年以内に保険を利用</p>
           </div>
-          <div className="container__massage--main">
-            <div className="container__massage--coments">
+          <div className="data-item__massage--main">
+            <div className="data-item__massage--coments">
               <p>Animalの保険に新たに加入したペットが</p>
               <p>１年以内に保険金を請求する割合は約60%。</p>
               <p>元気いっぱいのワンちゃん、ネコちゃんでも怪我や病気に注意が必要です。</p>
-              <p>大切なわが子の<span>”万が一”</span>に備えられるのが、ペット保険の大きなメリットです。</p>
+              <img src= { run } />
             </div>
-            <div className="container__massage--imgbox"></div>
+            <div className="data-item__massage--imgbox">
+              <div className="pie"></div>
+            </div>
           </div>
         </div>
 
-        <div className="container-item container--items">
+        <div className="data-item-item data-item--items">
           <h1>選ばれる <span>3</span>つのポイント!</h1>
           <div className="point">
             <div className="point--item">
@@ -52,7 +55,7 @@ export default class Dataitem extends Component {
           </div>
         </div>
 
-        <div className="container-item container--product">
+        <div className="data-item-item data-item--product">
           <h1>我が子に合わせて選べる <span>2</span>つの商品</h1>
           <div className="product">
             <div className="product-item" id="product1">

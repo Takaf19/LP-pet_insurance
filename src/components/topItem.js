@@ -8,7 +8,7 @@ export default class TopItem extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="dataItem">
         <div className="container-item container__massage">
           <h1>大切な家族の<span>"万が一"</span>に備える</h1>
           <div className="container__massage--main">
