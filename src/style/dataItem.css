@@ -1,0 +1,79 @@
+.data-item {
+  padding: 5vh 0;
+}
+
+h1 {
+  font-size: 3.5vw;
+}
+
+.data-item-item {
+  margin: 10vh 0;
+}
+
+.data-item__massage {
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  padding: 2vw;
+  border-radius: 10px;
+}
+
+.data-item__massage h1 {
+  margin-bottom: 5vw;
+  font-size: 3vw;
+}
+
+.data-item__massage--main {
+  display: flex;
+  justify-content: space-between;
+  height: 30vw;
+}
+
+.data-item__massage--coments {
+  margin: 0 auto;
+  width: 60%;
+  position: relative;
+}
+
+.data-item__massage--coments p {
+  text-align: left;
+  word-wrap: break-word;
+  font-size: 1.5vw;
+}
+
+.data-item__massage--coments > img {
+  position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.data-item__massage--imgbox {
+  background: red;
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+
+.pie{
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #1abc9c;
+  background-image: linear-gradient(to right, transparent 50%, #fe8a01 0); 
+}
+.pie::before{ 
+  content: ''; 
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 100% 100% 0 / 50%;
+  background-color: inherit;
+  transform-origin: left;
+  background: #fe8a01; /*ここで色をオレンジにする*/
+  transform: rotate(.1turn);
+}
