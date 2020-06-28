@@ -1,11 +1,13 @@
 .data-item {
   border-radius: 10px 10px 0 0;
-  background: rgb(255, 255, 255);
-  margin: 20vh 0;
 }
 
 h1 {
   font-size: 3.5vw;
+}
+h2 {
+  font-size: 2vw;
+  margin: 0;
 }
 
 .data-item__massage {
@@ -20,7 +22,6 @@ h1 {
 }
 
 .data-item--title {
-  margin-bottom: 5vw;
   padding: 2.5vw 0;
   font-size: 3vw;
   font-weight: 800;
@@ -50,6 +51,14 @@ h1 {
   font-size: 4vw;
 }
 
+.data-item--item {
+  background: rgb(255, 255, 255);
+}
+
+.data-item__massage {
+  padding-top: 3vw;
+}
+
 .data-item__massage--main {
   display: flex;
   justify-content: space-between;
@@ -58,7 +67,6 @@ h1 {
 }
 
 .data-item__massage--coments {
-  margin: 0 auto;
   width: 60%;
   position: relative;
 }
@@ -188,3 +196,83 @@ h1 {
     transform: rotate(.1turn);
   }
 }
+
+/* 二頭に一頭が一年以内に保険金請求 */
+
+.data-item--rank{
+
+}
+.data-item--rank > h2 {
+  color: rgb(252, 81, 81);
+  font-size: 2.5vw;
+  font-weight: 900;
+}
+
+.rank-items {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+}
+
+.rank-item {
+  width: 20%;
+  margin: 0 1vw;
+  border: solid 1px gray;
+}
+
+.rank-item > h2 {
+  padding: 1vw 0;
+  color: white;
+}
+
+#rank1 > h2 {
+  background: rgb(76, 151, 248);
+}
+
+#rank2 > h2 {
+  background: rgb(250, 152, 5);
+}
+
+.rank-item li {
+  text-align: left;
+  list-style: none;
+  padding: 5% 0 5% 40%;
+  font-size: 1.5vw;
+}
+
+.rank-item li:nth-child(2) {
+  border-top: dashed 2px gray;
+  border-bottom: dashed 2px gray;
+}
+
+.rank-item--list {
+  padding: 3vw 0;
+}
+
+.rank-item--list > table {
+  margin: 0 auto;
+  font-size: 1.5vw;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+.rank-item--list > table tr:nth-child(3),
+.rank-item--list > table tr:nth-child(5) {
+  background: lightgray;
+}
+
+.rank-item--list > table th,
+.rank-item--list > table td {
+  padding: 1vw;
+}
+
+
+.rank-item--list > table th {
+   background: gray;
+   color: white;
+}
+.rank-item--list > table th:nth-child(1) {
+  width: 40%;
+}
+
+
