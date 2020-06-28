@@ -7,14 +7,15 @@ export default class Dataitem extends Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     return (
       <div className="data-item">
-        <div className="data-item-item data-item__massage">
-          <div className="data-item--title">
-            <p>2頭に1頭が</p>
-            <p>加入後<span>1年以内</span>に保険を利用！！</p>
-          </div>
+        <div className="data-item--title">
+          <p>2頭に1頭が</p>
+          <p>加入後<span>1年以内</span>に保険を利用！！</p>
+        </div>
+        <div className="data-item--item data-item__massage">
           <div className="data-item__massage--main">
             <div className="data-item__massage--coments">
               <p>Animalの保険に新たに加入したペットが</p>
@@ -33,49 +34,45 @@ export default class Dataitem extends Component {
           <span className="border"></span>
         </div>
 
-        <div className="data-item--product">
-          <h1>我が子に合わせて選べる <span>2</span>つの商品</h1>
-          <div className="product">
-            <div className="product-item" id="product1">
-              <p>幅広い補償で万全サポート</p>
-              <h1>Animal</h1>
-              <div className="plan">
-                <span>手術</span>+<span>入院</span>+<span>通院</span>
-              </div>
+        <div className="data-item--item data-item--rank">
+          <h2> ＼ 保険金請求の多い傷病ランキング（手術）／</h2>
+          <div className="rank-items">
+            <div className="rank-item" id="rank1">
+              <h2>ワンちゃん</h2>
               <ul>
-                <li>
-                  <p><span>80%</span>と<span>50%</span>の選べる補償プラン！</p>
-                </li>
-                <li>
-                  <p><span>ペットの種類</span>に関わらず月々2,200円〜</p>
-                  <p>(補償割合50%の場合)</p>
-                </li>
-                <li>
-                  <p>「保険証」提示で<span>簡単窓口清算</span></p>
-                </li>
+                <li><p>腫瘍</p></li>
+                <li><p>歯周病</p></li>
+                <li><p>骨折</p></li>
               </ul>
-              <div className="list-btn">お見積もりはこちら</div>
             </div>
-            <div className="product-item" id="product2">
-              <p>高額な手術に備えて</p>
-              <h1>Animal Light</h1>
-              <div className="plan">
-                <span>手術</span>+<span>入院</span>
-              </div>
+            <div className="data-item--item rank-item" id="rank2">
+              <h2>ネコちゃん</h2>
               <ul>
-                <li>
-                  <p>手術費用最大<span>90%</span>補償！</p>
-                </li>
-                <li>
-                  <p><span>ペットの種類</span>に関わらず月々990円〜</p>
-                </li>
-                <li>
-                  <p>Webからの申し込みで<span>10%割引</span></p>
-                </li>
+                <li><p>異物誤飲</p></li>
+                <li><p>腫瘍</p></li>
+                <li><p>歯周病</p></li>
               </ul>
-              <div className="list-btn">お見積もりはこちら</div>
             </div>
           </div>
+        </div>
+        <div className="data-item--item rank-item--list">
+          <table>
+            <tr>
+              <th>傷病名</th><th>参考治療費</th>
+            </tr>
+            <tr>
+              <td>腫瘍</td><td>90,400円</td>
+            </tr>
+            <tr>
+              <td>歯周病</td><td>97,300円</td>
+            </tr>
+            <tr>
+              <td>骨折</td><td>308,700円</td>
+            </tr>
+            <tr>
+              <td>異物誤飲</td><td>77,760円</td>
+            </tr>
+          </table>
         </div>
       </div>
     );
