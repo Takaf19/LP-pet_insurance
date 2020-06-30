@@ -18,7 +18,7 @@ h2 {
   width: 90%;
   height: 1px;
   background: slategrey;
-  margin: 5vw 0 2vw;
+  margin: 3vw 0 2vw;
 }
 
 .data-item--title {
@@ -27,6 +27,7 @@ h2 {
   font-weight: 800;
   background: rgb(133, 133, 241);
   border-radius: 10px 10px 0 0;
+  box-shadow: 0px 3px 3px gray;
   color: white;
   position: relative;
 }
@@ -53,10 +54,11 @@ h2 {
 
 .data-item--item {
   background: rgb(255, 255, 255);
+  box-shadow: 0px 5px 5px gray;
 }
 
 .data-item__massage {
-  padding-top: 3vw;
+  padding-top: 2vw;
 }
 
 .data-item__massage--main {
@@ -79,7 +81,7 @@ h2 {
 
 .data-item__massage--coments > img {
   position: absolute;
-    bottom: -5%;
+    bottom: 0;
     left: 0;
   width: 70%;
 }
@@ -215,9 +217,9 @@ h2 {
 }
 
 .rank-item {
-  width: 20%;
+  width: 30%;
   margin: 0 1vw;
-  border: solid 1px gray;
+  border: solid 2px gray;
 }
 
 .rank-item > h2 {
@@ -236,8 +238,34 @@ h2 {
 .rank-item li {
   text-align: left;
   list-style: none;
-  padding: 5% 0 5% 40%;
-  font-size: 1.5vw;
+  padding: 3% 0;
+  font-size: 2vw;
+}
+
+.rank-item li > div {
+  display: flex;
+  font-size: 2vw;
+}
+
+.rank-item li > div > div {
+  margin: 0 10% 0 10%;
+  position: relative;
+}
+
+.rank-item li div svg {
+  font-size: 3.2vw;
+  color: rgba(253, 211, 159, 0.733);
+}
+
+.rank-item li div span {
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+  font-weight: 900;
+  text-shadow: 1px 1px rgb(3, 106, 117);
 }
 
 .rank-item li:nth-child(2) {

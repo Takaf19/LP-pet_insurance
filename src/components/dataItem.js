@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import '../style/dataItem.css';
 import run from  '../image/run.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPaw } from "@fortawesome/free-solid-svg-icons";
+
 
 
 export default class Dataitem extends Component {
@@ -40,17 +43,47 @@ export default class Dataitem extends Component {
             <div className="rank-item" id="rank1">
               <h2>ワンちゃん</h2>
               <ul>
-                <li><p>腫瘍</p></li>
-                <li><p>歯周病</p></li>
-                <li><p>骨折</p></li>
+                <li>
+                  <div>
+                    <div><span>1</span><FontAwesomeIcon icon={faPaw} /></div>
+                    <p>腫瘍</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <div><span>2</span><FontAwesomeIcon icon={faPaw} /></div>
+                    <p>歯周病</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <div><span>3</span><FontAwesomeIcon icon={faPaw} /></div>
+                    <p>骨折</p>
+                  </div>
+                </li>
               </ul>
             </div>
-            <div className="data-item--item rank-item" id="rank2">
+            <div className="rank-item" id="rank2">
               <h2>ネコちゃん</h2>
               <ul>
-                <li><p>異物誤飲</p></li>
-                <li><p>腫瘍</p></li>
-                <li><p>歯周病</p></li>
+                <li>
+                  <div>
+                    <div><span>1</span><FontAwesomeIcon icon={faPaw} /></div>
+                    <p>異物誤飲</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <div><span>2</span><FontAwesomeIcon icon={faPaw} /></div>
+                    <p>腫瘍</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <div><span>3</span><FontAwesomeIcon icon={faPaw} /></div>
+                    <p>歯周病</p>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>

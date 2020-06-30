@@ -16,13 +16,14 @@ p {
 
 .container__massage {
   overflow: hidden;
-  background: rgb(255, 255, 255);
-  padding: 2vw 0 1vw 0;
-  border-radius: 10px;
+  background: white;
+  padding: 3vw 0 1vw 0;
+  border-top: 1vw solid rgba(117, 169, 247, 0.842);
+  box-shadow: 0px 0px 5px gray;
 }
 
 .container__massage h1 {
-  margin-bottom: 3vw;
+  margin-bottom: 2vw;
   font-size: 3vw;
   position: relative;
 }
@@ -35,7 +36,7 @@ p {
   margin: 0 auto;
   height: 20%;
   width: 0;
-  background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.6);
   -webkit-animation: borderline 1s linear;
   animation: borderline 1s linear;
   -webkit-animation-fill-mode: forwards;
@@ -97,7 +98,7 @@ p {
   margin: 0 auto;
   width: 40%;
   z-index: 3;
-  padding: 5% 1%;
+  padding: 1%;
   background: rgba(250, 252, 252, 0.822);
 }
 
@@ -133,7 +134,9 @@ p {
    bottom: 0px;
     height: 90%;
   background: rgb(247, 72, 72);
-  border: 1vw solid tomato;
+  border-top: 1vw solid tomato;
+  border-bottom: 1vw solid tomato;
+  box-shadow: 0px 3px 3px gray;
   z-index: -1;
 }
 
@@ -153,7 +156,9 @@ p {
   width: calc(100% / 3);
   margin: 5px;
   background: white;
-  padding: 1vw 2vw;
+  color: rgb(247, 72, 72);
+  border-top: 2vw solid rgb(247, 72, 72);
+  box-shadow: 0px 5px 5px gray;
 }
 
 .point-icon {
@@ -166,10 +171,13 @@ p {
 
 .point--item p:nth-child(2) {
   font-size: 2vw;
+  font-weight: 900;
 }
 .point--item p:nth-child(3) {
   text-align:left;
   font-size: 1.5vw;
+  color: black;
+    padding: 1vw 2vw 2.5vw;
 }
 
 
@@ -190,7 +198,9 @@ p {
    bottom: 0px;
     height: 90%;
   background: rgb(149, 202, 79);
-  border: 1vw solid rgb(91, 209, 91);
+  border-top: 1vw solid rgb(91, 209, 91);
+  border-bottom: 1vw solid rgb(91, 209, 91);
+  box-shadow: 0px 3px 3px gray;
   z-index: -1;
 }
 
@@ -211,6 +221,7 @@ p {
   padding: 4vw 2vw;
   background: white;
   position: relative;
+  box-shadow: 0px 5px 5px gray;
 }
 
 .product-item > p {
@@ -230,6 +241,33 @@ p {
   font-weight: 600;
   font-size: 2vw;
   margin-top: 1.5vw;
+  background: rgb(245, 178, 217);
+  position: relative;
+  border-bottom: 3px solid lightgray;
+}
+
+.plan:before, .plan:after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.plan::before {
+  top: 0;
+  left: 0;
+  border-width: 2vw 0px 2vw 2vw;
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+}
+
+.plan::after {
+  top: 0;
+  right: 0;
+  border-width: 2vw 2vw 2vw 0px;
+  border-color: transparent #fff transparent transparent;
+  border-style: solid;
 }
 
 .plan > span {
@@ -245,12 +283,11 @@ p {
   border: 2px solid red;
 }
 .plan > span:nth-child(3) {
-  border: 2px solid rgb(255, 187, 0);
+  border: 2px solid rgb(251, 255, 0);
 }
 
 .product-item > ul {
   text-align: left;
-  margin-top: 3vw;
   font-size: 1.5vw;
   height: 35%;
 }
@@ -265,7 +302,7 @@ p {
     font-weight: 600;
   }
 
-  li:nth-child(2) > p:nth-child(2){
+  .product-item li:nth-child(2) > p:nth-child(2){
     font-size: 1.5vw;
   }
 
