@@ -1,6 +1,30 @@
+.like--title {
+  padding: 1.5vw 0;
+  font-size: 3vw;
+  font-weight: 800;
+  margin-top: 8vw;
+  background: #2176d6;
+  color: white;
+  position: relative;
+  border: 2px solid #1a59a1;
+}
+
+.like--title p:nth-child(1) {
+  font-size: 1.8vw;
+}
+
+.like--title p:nth-child(2) {
+  color: yellow;
+}
+
 .like__message {
-  background-color: red;
+  background: #9fd5f8;
   padding: 2vw 3vw;
+  margin-bottom: 1vw;
+}
+
+.like__message--item {
+  margin-bottom: 0.5vw;
 }
 
 .like__message--title {
@@ -14,7 +38,7 @@
   font-size: 2vw;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0px 0px 2px 2px gray;
+  border: 2px solid #1a59a1;
 }
 
 .like__message--title img {
@@ -23,7 +47,8 @@
     left: 0;
   height: 20vw;
   width: 20vw;
-  border-radius: 0 50% 50% 0;
+  border-radius: 0 100% 50% 0;
+  box-shadow: 0 0 0 10px #3268a5;
 }
 
 .like-item--message {
@@ -42,14 +67,19 @@
 
 .like-item--exp {
   background: white;
-  height: 1%;
-  padding: 0;
+  text-align: left;
+  word-break: normal;
+  display: none;
+  font-size: 1.5vw;
   overflow: hidden;
 }
 
+.like-item--exp p{
+  padding: 1.3vw;
+}
 
-/* .like-item--exp.active {
-  background: red;
-  height: 100%;
-  padding: 1vw;
-} */
+
+.like__message--bottom {
+  margin: 3vw;
+  font-weight: 800;
+}
