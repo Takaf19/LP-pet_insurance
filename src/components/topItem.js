@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import '../style/topItem.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMedkit } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faGrinSquint } from "@fortawesome/free-solid-svg-icons";
 
 export default class TopItem extends Component {
   constructor(props) {
@@ -27,21 +30,21 @@ export default class TopItem extends Component {
           <div className="point">
             <div className="point--item">
               <div className="point-icon">
-
+                <FontAwesomeIcon icon={faMedkit} />
               </div>
               <p>１２歳まで新規加入OK!</p>
               <p>年齢が不明な場合は、獣医師による推定年齢で加入OK</p>
             </div>
             <div className="point--item">
               <div className="point-icon">
-
+                <FontAwesomeIcon icon={faHeart} />
               </div>
               <p>手厚いサポート</p>
               <p>歯科治療・先進治療・先天性の病気も保証の対象</p>
             </div>
             <div className="point--item">
               <div className="point-icon">
-
+                <FontAwesomeIcon icon={faGrinSquint} />
               </div>
               <p>最短１ヶ月スタート</p>
               <p>ご契約から最短１ヶ月で補償スタート</p>

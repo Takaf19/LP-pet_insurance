@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../style/like.css';
 import CatIcon from '../image/cat-icon.jpg';
+import DogIcon from '../image/dog-icon.jpg';
+import Dog2Icon from '../image/dog2-icon.jpg';
 
 export default class Dataitem extends Component {
   constructor(props) {
@@ -8,20 +10,46 @@ export default class Dataitem extends Component {
   }
 
   render() {
-    function likeClick(e) {
+    let message = [ false, false, false]
+    function likeClick(messageId, e) {
       e.preventDefault();
       let exp = e.currentTarget.getElementsByClassName("like-item--exp");
-      // exp[0].classList.add("active");
-
       var counter = 0;
-      var per = Math.abs(0 - 50) / (1000 / 10);
-      var slideTimer = setInterval(function() {
+      var per = Math.abs(0 - 50) / (100 / 10);
+      let math = 0;
+
+      if( message[messageId] === false ) {
+        // 開く処理
+        exp[0].style.display = "block";
+        let height = exp[0].clientHeight;
+        exp[0].style.height = 0;
+        var slideTimer = setInterval(function() {
           counter++;
-          exp[0].style.height = Math.abs(0 + per * counter) + '%';
-          if(exp[0].style.height == "100%") {
+          math = Math.abs(0 + per * counter);
+          exp[0].style.height = math + 'px';
+          if(math >= height) {
               clearInterval(slideTimer);
+              exp[0].style.height = "";
+              message[messageId] = !message[messageId];
+              // exp[0].classList.add("active");
           }
-      }, 10);
+        }, 10);
+      } else {
+        // 閉じる処理
+        let height = exp[0].clientHeight;
+        var slideTimer = setInterval(function() {
+          counter++;
+          math = height - per * counter;
+          exp[0].style.height = math + 'px';
+          if(math <= 0) {
+              clearInterval(slideTimer);
+              exp[0].style.display = "none";
+              exp[0].style.height = "";
+              message[messageId] = !message[messageId];
+              // exp[0].classList.add("active");
+          }
+        }, 10);
+      }
     }
     return (
       <div className="like">
@@ -30,7 +58,7 @@ export default class Dataitem extends Component {
             <p>ご契約社様の<span>喜びの声</span></p>
         </div>
         <div className="like__message">
-          <div className="like__message--item"　onClick={likeClick}>
+          <div className="like__message--item"　onClick={likeClick.bind(this, 0)}>
             <div className="like__message--title">
               <img src={CatIcon} className="like-item--icon"/>
               <div className="like-item--message">
@@ -48,8 +76,9 @@ export default class Dataitem extends Component {
                 Animalは、治療目的であれば全身麻酔下の歯科治療も保証されるのがありがたいです。</p>
             </div>
           </div>
-          <div className="like__message--item"　onClick={likeClick}>
+          <div className="like__message--item"　onClick={likeClick.bind(this, 1)}>
             <div className="like__message--title">
+              <img src={DogIcon} className="like-item--icon"/>
               <div className="like-item--icon" id="likeIcon2"></div>
               <div className="like-item--message">
                 <p>高度な医療を受ける事が出来ました。</p>
@@ -66,48 +95,31 @@ export default class Dataitem extends Component {
                 手術の成功をひたすら祈ることが出来ました。現在は元気に走り回っています！</p>
             </div>
           </div>
-          <span className="border"></span>
-        </div>
-
-        <div className="data-item--rank">
-          <h2> ＼ 保険金請求の多い傷病ランキング（手術）／</h2>
-          <div className="rank-items">
-            <div className="rank-item" id="rank1">
-              <h2>ワンちゃん</h2>
-              <ul>
-                <li><p>腫瘍</p></li>
-                <li><p>歯周病</p></li>
-                <li><p>骨折</p></li>
-              </ul>
+          <div className="like__message--item"　onClick={likeClick.bind(this, 2)}>
+            <div className="like__message--title">
+              <img src={Dog2Icon} className="like-item--icon"/>
+              <div className="like-item--icon" id="likeIcon2"></div>
+              <div className="like-item--message">
+                <p>保険証で手軽に申請ができる！</p>
+                <p>ダックスフンド　2歳　メス　はなちゃん</p>
+              </div>
+              <span className="like-item--btn">
+                ▼
+              </span>
             </div>
-            <div className="rank-item" id="rank2">
-              <h2>ネコちゃん</h2>
-              <ul>
-                <li><p>異物誤飲</p></li>
-                <li><p>腫瘍</p></li>
-                <li><p>歯周病</p></li>
-              </ul>
+            <div className="like-item--exp">
+              <div className="exp-text">
+                <p>以前は別の保険に入っていましたが、申請するには領収証をいちいちまとめて送らなければならず、大変手間に感じておりました。</p>
+                <p>そんな時にこちらのAnimal保険を知り、保険証を提示するだけで簡単に申請ができる点が魅力的で加入を決めました。
+                  この先、頻繁に病院に通うことになっても、手軽に申請できるのは大変ありがたいと感じています。
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="rank-item--list">
-          <table>
-            <tr>
-              <th>傷病名</th><th>参考治療費</th>
-            </tr>
-            <tr>
-              <td>腫瘍</td><td>90,400円</td>
-            </tr>
-            <tr>
-              <td>歯周病</td><td>97,300円</td>
-            </tr>
-            <tr>
-              <td>骨折</td><td>308,700円</td>
-            </tr>
-            <tr>
-              <td>異物誤飲</td><td>77,760円</td>
-            </tr>
-          </table>
+          <div className="like__message--bottom">
+            <p>他にもお客様からお喜びの声が続々届いております！</p>
+            <p>大切な家族と幸せな生活を過ごすため、ペット保険の加入をぜひご検討ください。</p>
+          </div>
         </div>
       </div>
     );
