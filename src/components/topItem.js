@@ -3,7 +3,7 @@ import '../style/topItem.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMedkit } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { faGrinSquint } from "@fortawesome/free-solid-svg-icons";
+import { faGrinSquint, faPaw } from "@fortawesome/free-solid-svg-icons";
 
 export default class TopItem extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export default class TopItem extends Component {
   }
   render() {
     return (
-      <div className="dataItem">
+      <div className="dataItem fadeInUp">
         <div className="container-item container__massage">
           <h1>大切な家族の<span>"万が一"</span>に備える</h1>
           <div className="container__massage--main">
@@ -24,25 +24,25 @@ export default class TopItem extends Component {
             </div>
           </div>
         </div>
-
+        <span className="border"></span>
         <div className="container-item container--items">
           <h1>選ばれる <span>3</span>つのポイント!</h1>
           <div className="point">
             <div className="point--item">
-              <div className="point-icon">
+              <div className="point-icon" id="point-icon1">
                 <FontAwesomeIcon icon={faMedkit} />
               </div>
               <p>１２歳まで新規加入OK!</p>
               <p>年齢が不明な場合は、獣医師による推定年齢で加入OK</p>
             </div>
-            <div className="point--item">
+            <div className="point--item" id="point-icon2">
               <div className="point-icon">
                 <FontAwesomeIcon icon={faHeart} />
               </div>
               <p>手厚いサポート</p>
               <p>歯科治療・先進治療・先天性の病気も保証の対象</p>
             </div>
-            <div className="point--item">
+            <div className="point--item" id="point-icon3">
               <div className="point-icon">
                 <FontAwesomeIcon icon={faGrinSquint} />
               </div>
@@ -57,45 +57,45 @@ export default class TopItem extends Component {
           <div className="product">
             <div className="product-item" id="product1">
               <p>幅広い補償で万全サポート</p>
-              <h1>Animal</h1>
+              <h1>AniLIFE</h1>
               <div className="plan">
                 <span>手術</span>+<span>入院</span>+<span>通院</span>
               </div>
               <ul>
                 <li>
-                  <p><span>80%</span>と<span>50%</span>の選べる補償プラン！</p>
+                  <p><FontAwesomeIcon icon={faPaw} /><span>80%</span>と<span>50%</span>の選べる補償プラン！</p>
                 </li>
                 <li>
-                  <p><span>ペットの種類</span>に関わらず月々2,200円〜</p>
-                  <p>(補償割合50%の場合)</p>
+                  <p><FontAwesomeIcon icon={faPaw} /><span>ペットの種類</span>に関わらず月々2,200円〜</p>
                 </li>
                 <li>
-                  <p>「保険証」提示で<span>簡単窓口清算</span></p>
+                  <p><FontAwesomeIcon icon={faPaw} />「保険証」提示で<span>簡単窓口清算</span></p>
                 </li>
               </ul>
               <div className="list-btn">お見積もりはこちら</div>
             </div>
             <div className="product-item" id="product2">
               <p>高額な手術に備えて</p>
-              <h1>Animal Light</h1>
+              <h1>AniLIFE Light</h1>
               <div className="plan">
                 <span>手術</span>+<span>入院</span>
               </div>
               <ul>
                 <li>
-                  <p>手術費用最大<span>90%</span>補償！</p>
+                  <p><FontAwesomeIcon icon={faPaw} />手術費用最大<span>90%</span>補償！</p>
                 </li>
                 <li>
-                  <p><span>ペットの種類</span>に関わらず月々990円〜</p>
+                  <p><FontAwesomeIcon icon={faPaw} /><span>ペットの種類</span>に関わらず月々990円〜</p>
                 </li>
                 <li>
-                  <p>Webからの申し込みで<span>10%割引</span></p>
+                  <p><FontAwesomeIcon icon={faPaw} />Webからの申し込みで<span>10%割引</span></p>
                 </li>
               </ul>
               <div className="list-btn">お見積もりはこちら</div>
             </div>
           </div>
         </div>
+        <span className="border"></span>
       </div>
     );
   }

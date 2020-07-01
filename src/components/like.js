@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../style/like.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGift} from "@fortawesome/free-solid-svg-icons";
 import CatIcon from '../image/cat-icon.jpg';
 import DogIcon from '../image/dog-icon.jpg';
 import Dog2Icon from '../image/dog2-icon.jpg';
@@ -55,7 +57,11 @@ export default class Dataitem extends Component {
       <div className="like">
         <div className="like--title">
             <p>加入していてよかった！</p>
-            <p>ご契約社様の<span>喜びの声</span></p>
+            <p>
+              <FontAwesomeIcon icon={faGift} />
+               ご契約社様の<span>喜びの声</span>
+               <FontAwesomeIcon icon={faGift} />
+            </p>
         </div>
         <div className="like__message">
           <div className="like__message--item"　onClick={likeClick.bind(this, 0)}>
@@ -71,9 +77,9 @@ export default class Dataitem extends Component {
             </div>
             <div className="like-item--exp">
               <p>加入後に歯周病を発症し、治療のため抜歯を含む高額手術をしました。
-                初めての手術で不安でしたが、Animalの「Animal Light」に加入していたおかげで本当に助かりました。</p>
+                初めての手術で不安でしたが、AniLIFEの「AniLIFE Light」に加入していたおかげで本当に助かりました。</p>
               <p>半年後に再発をしてしまいましたが、その時も費用の心配はいりませんでした。
-                Animalは、治療目的であれば全身麻酔下の歯科治療も保証されるのがありがたいです。</p>
+                AniLIFEは、治療目的であれば全身麻酔下の歯科治療も保証されるのがありがたいです。</p>
             </div>
           </div>
           <div className="like__message--item"　onClick={likeClick.bind(this, 1)}>
@@ -89,7 +95,7 @@ export default class Dataitem extends Component {
               </span>
             </div>
             <div className="like-item--exp">
-              <p>いざという時のために、お守りのつもりでAnimal Lightに加入しました。
+              <p>いざという時のために、お守りのつもりでAniLIFE Lightに加入しました。
                 ８歳になる頃、健康診断で肝臓辺りに巨大腫瘍が発見され、難しい手術を受けることになりました。</p>
               <p>とても不安でしたが、保険に加入していたことで費用の心配はしなくて済み、
                 手術の成功をひたすら祈ることが出来ました。現在は元気に走り回っています！</p>
@@ -110,7 +116,7 @@ export default class Dataitem extends Component {
             <div className="like-item--exp">
               <div className="exp-text">
                 <p>以前は別の保険に入っていましたが、申請するには領収証をいちいちまとめて送らなければならず、大変手間に感じておりました。</p>
-                <p>そんな時にこちらのAnimal保険を知り、保険証を提示するだけで簡単に申請ができる点が魅力的で加入を決めました。
+                <p>そんな時にこちらのAniLIFE保険を知り、保険証を提示するだけで簡単に申請ができる点が魅力的で加入を決めました。
                   この先、頻繁に病院に通うことになっても、手軽に申請できるのは大変ありがたいと感じています。
                 </p>
               </div>
