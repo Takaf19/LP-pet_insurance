@@ -4,6 +4,7 @@ import Dog from './image/dog.png'
 import TopItem from './components/topItem';
 import DataItem from './components/dataItem';
 import Like from './components/like';
+import Footer from './components/footer';
 
 // Appクラスを定義してください
 class App extends React.Component {
@@ -14,7 +15,7 @@ class App extends React.Component {
           <img src={Dog} />
         </div>
         <div className="top-sp">
-          <div className="background-massage">
+          <div className="background-massage animate__animated fadeInUp">
               <p>わが子の未来のために。</p>
               <p>ペット保険は</p>
               <p>AniLIFE</p>
@@ -25,7 +26,8 @@ class App extends React.Component {
           <DataItem></DataItem>
           <Like></Like>
         </div>
-
+        <p className=".animate__animated fadeInUp">aa</p>
+        <Footer></Footer>
       </>
     );
   }
