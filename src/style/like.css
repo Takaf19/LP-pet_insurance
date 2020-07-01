@@ -18,10 +18,17 @@
   color: yellow;
 }
 
+.like--title p:nth-child(2) > svg {
+  margin: 0 1vw;
+  color: rgb(239, 137, 250);
+}
+
 .like__message {
+  margin: 0 1%;
   background: #9fd5f8;
   padding: 2vw 3vw;
   margin-bottom: 1vw;
+  box-shadow: 0px 3px 3px gray;
 }
 
 .like__message--item {
@@ -34,6 +41,7 @@
   padding: 1vw;
   background: #2176d6;
   color: white;
+  box-shadow: 0px 3px 3px gray;
   font-weight: 700;
   position: relative;
   font-size: 2vw;
@@ -73,14 +81,18 @@
   display: none;
   font-size: 1.5vw;
   overflow: hidden;
+  width: 99%;
+  margin: 0 auto;
+  box-shadow: 0px 3px 3px gray;
 }
 
 .like-item--exp p{
-  padding: 1.3vw;
+  padding: 1.5vw;
 }
 
 
 .like__message--bottom {
-  margin: 3vw;
+  margin: 3vw 0 0;
+  color: rgb(3, 3, 71);
   font-weight: 800;
 }

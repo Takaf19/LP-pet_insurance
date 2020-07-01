@@ -2,30 +2,22 @@
   padding: 5vh 0;
 }
 
-h1 {
-  font-size: 3.5vw;
-}
-
-p {
-   margin: 0;
-}
-
 .container-item {
-  margin: 10% 0;
+  margin-bottom: 5%;
 }
 
 .container__massage {
   overflow: hidden;
-  background: white;
   padding: 3vw 0 1vw 0;
-  border-top: 1vw solid rgba(117, 169, 247, 0.842);
-  box-shadow: 0px 0px 5px gray;
 }
 
 .container__massage h1 {
   margin-bottom: 2vw;
   font-size: 3vw;
+  padding: 1vw 0;
   position: relative;
+  z-index: 1;
+  color: rgb(49, 47, 47);
 }
 .container__massage h1::before {
   content: "";
@@ -34,9 +26,12 @@ p {
   left: 0;
   right: 0;
   margin: 0 auto;
-  height: 20%;
+  height: 100%;
   width: 0;
-  background-color: rgba(255, 255, 0, 0.6);
+  z-index: -1;
+  border-top: 3px solid orange;
+  border-bottom: 3px solid orange;
+  background-color: rgba(250, 250, 81, 0.973);
   -webkit-animation: borderline 1s linear;
   animation: borderline 1s linear;
   -webkit-animation-fill-mode: forwards;
@@ -54,9 +49,6 @@ p {
   width: 100%;
   height: 100%;
   position: relative;
-  transform-origin: bottom right;
-  overflow:hidden;
-  position: relative;
 }
 
 .container__massage--imgbox::before {
@@ -66,11 +58,11 @@ p {
   right: 0;
   left: 0;
   bottom: 0;
-  width: 95%;
-  height: 95%;
+  width: 90%;
+  height: 90%;
   z-index: 2;
   margin: auto;
-  box-shadow: inset 0px 0px 5px 5px white;
+  box-shadow: 0px 0px 3px 5px rgba(211, 211, 211, 0.616);
 }
 
 .container__massage--imgbox::after {
@@ -80,15 +72,16 @@ p {
   right: 0;
   left: 0;
   bottom: 0;
-  width: 95%;
-  height: 95%;
+  width: 90%;
+  height: 90%;
   margin: auto;
-  background-image: url(../image/cat.jpg);
+  background-image: url(../image/top-dog.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
-  
+  filter: brightness(80%);
+  box-shadow: -3vw -2vw 0 0.5vw rgba(11, 41, 65, 0.7);;
 }
 
 .container__massage--coments {
@@ -99,7 +92,9 @@ p {
   width: 40%;
   z-index: 3;
   padding: 1%;
-  background: rgba(250, 252, 252, 0.822);
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  background: rgba(59, 59, 59, 0.7);
 }
 
 .container__massage--coments p {
@@ -115,7 +110,7 @@ p {
     width: 50%;
   }
   100% {
-    width: 60%;
+    width: 70%;
   }
 }
 
@@ -123,6 +118,7 @@ p {
 /* 選ばれるポイント */
 .container--items > h1{
   margin: 0;
+  color: rgb(253, 254, 255);
   position: relative;
   z-index: 1;
 }
@@ -154,7 +150,7 @@ p {
 
 .point--item {
   width: calc(100% / 3);
-  margin: 5px;
+  margin: 10px;
   background: white;
   color: rgb(247, 72, 72);
   border-top: 2vw solid rgb(247, 72, 72);
@@ -167,6 +163,54 @@ p {
 
 .point-icon > svg {
   font-size: 10vw;
+}
+
+#point-icon1 svg {
+  -webkit-animation: katamuke 2s linear infinite;
+  animation: katamuke 2s linear infinite;
+}
+#point-icon2 svg {
+  -webkit-animation: katamuke 2s linear infinite;
+  animation: katamuke 2s linear infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+#point-icon3 svg {
+  -webkit-animation: katamuke 2s linear infinite;
+  animation: katamuke 2s linear infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+
+@keyframes katamuke {
+  0% {
+    transform:rotate(0);
+  }
+  30% {
+    transform:rotate(-20deg); 
+  }
+  40%{
+    transform:rotate(20deg); 
+  }
+  50%{
+    transform:rotate(-15deg); 
+  }
+  60%{
+    transform:rotate(15deg); 
+  }
+  70%{
+    transform:rotate(-10deg); 
+  }
+  80%{
+    transform:rotate(10deg); 
+  }
+  90%{
+    transform:rotate(-5deg); 
+  }
+  100%{
+    transform:rotate(0);
+  }
 }
 
 .point--item p:nth-child(2) {
@@ -182,13 +226,11 @@ p {
 
 
 /* 選べる商品 */
-.container--product {
-
-}
 .container--product > h1 {
   margin: 0;
   position: relative;
   z-index: 1;
+  color: rgb(253, 254, 255);
 }
 .container--product > h1::before {
   position: absolute;
@@ -197,9 +239,9 @@ p {
    right: 0;
    bottom: 0px;
     height: 90%;
-  background: rgb(149, 202, 79);
-  border-top: 1vw solid rgb(91, 209, 91);
-  border-bottom: 1vw solid rgb(91, 209, 91);
+  background: rgb(127, 204, 26);
+  border-top: 1vw solid rgb(93, 187, 93);
+  border-bottom: 1vw solid rgb(93, 187, 93);
   box-shadow: 0px 3px 3px gray;
   z-index: -1;
 }
@@ -241,33 +283,10 @@ p {
   font-weight: 600;
   font-size: 2vw;
   margin-top: 1.5vw;
-  background: rgb(245, 178, 217);
+  background: rgb(252, 189, 225);
   position: relative;
+  color: rgb(70, 68, 68);
   border-bottom: 3px solid lightgray;
-}
-
-.plan:before, .plan:after {
-  position: absolute;
-  content: '';
-  width: 0px;
-  height: 0px;
-  z-index: 1;
-}
-
-.plan::before {
-  top: 0;
-  left: 0;
-  border-width: 2vw 0px 2vw 2vw;
-  border-color: transparent transparent transparent #fff;
-  border-style: solid;
-}
-
-.plan::after {
-  top: 0;
-  right: 0;
-  border-width: 2vw 2vw 2vw 0px;
-  border-color: transparent #fff transparent transparent;
-  border-style: solid;
 }
 
 .plan > span {
@@ -293,13 +312,18 @@ p {
 }
 
 .product-item li {
-    margin: 2vw 0;
+    margin: 3vw 0;
     list-style: none;
 }
 
 .product-item li span {
     font-size: 2.5vw;
     font-weight: 600;
+  }
+
+  .product-item li p > svg {
+    font-size: 2.5vw;
+    margin: 0 5%;
   }
 
   .product-item li:nth-child(2) > p:nth-child(2){
@@ -327,6 +351,7 @@ p {
 
   #product1 .list-btn:hover  {
     color: rgb(8, 136, 241);
+    
   }
 
   #product2 .list-btn:hover  {
@@ -336,6 +361,7 @@ p {
   /* 左のボックス */
   #product1 {
     border-right: dashed 3px gray;
+    background-color: rgb(228, 245, 253);
   }
 
   #product1 > h1 {
@@ -346,7 +372,35 @@ p {
     color: rgb(8, 136, 241);
   }
 
+  #product1 .plan:before, #product1 .plan:after,
+  #product2 .plan:before, #product2 .plan:after {
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 0px;
+    z-index: 1;
+  }
+  
+  #product1 .plan::before {
+    top: 0;
+    left: 0;
+    border-width: 2vw 0px 2vw 2vw;
+    border-color: transparent transparent transparent rgb(228, 245, 253);
+    border-style: solid;
+  }
+  
+  #product1 .plan::after {
+    top: 0;
+    right: 0;
+    border-width: 2vw 2vw 2vw 0px;
+    border-color: transparent rgb(228, 245, 253) transparent transparent;
+    border-style: solid;
+  }
+
   /* 右のボックス */
+  #product2 {
+    background-color: rgb(252, 239, 216);
+  }
   #product2 > h1 {
     color: rgb(255, 136, 0);
   }
@@ -355,7 +409,18 @@ p {
     color: rgb(255, 136, 0);
   }
 
-  #product2 li:nth-child(3){
-    margin-top: 4vw;
-
+  #product2 .plan::before {
+    top: 0;
+    left: 0;
+    border-width: 2vw 0px 2vw 2vw;
+    border-color: transparent transparent transparent rgb(252, 239, 216);
+    border-style: solid;
+  }
+  
+  #product2 .plan::after {
+    top: 0;
+    right: 0;
+    border-width: 2vw 2vw 2vw 0px;
+    border-color: transparent rgb(252, 239, 216) transparent transparent;
+    border-style: solid;
   }

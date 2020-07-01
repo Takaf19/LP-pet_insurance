@@ -1,4 +1,5 @@
 .data-item {
+  margin-top: 5%;
   border-radius: 10px 10px 0 0;
 }
 
@@ -55,6 +56,7 @@ h2 {
 .data-item--item {
   background: rgb(255, 255, 255);
   box-shadow: 0px 5px 5px gray;
+  margin: 0 1%;
 }
 
 .data-item__massage {
@@ -63,7 +65,7 @@ h2 {
 
 .data-item__massage--main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: 30vw;
   padding: 2vw 3vw;
 }
@@ -87,7 +89,7 @@ h2 {
 }
 
 .data-item__massage--imgbox {
-  width: 40%;
+  width: 30%;
   height: 100%;
   position: relative;
 }
@@ -201,9 +203,6 @@ h2 {
 
 /* 二頭に一頭が一年以内に保険金請求 */
 
-.data-item--rank{
-
-}
 .data-item--rank > h2 {
   color: rgb(252, 81, 81);
   font-size: 2.5vw;
@@ -284,8 +283,8 @@ h2 {
   border-collapse: collapse;
 }
 
-.rank-item--list > table tr:nth-child(3),
-.rank-item--list > table tr:nth-child(5) {
+.rank-item--list > table tbody tr:nth-child(1),
+.rank-item--list > table tbody tr:nth-child(3) {
   background: lightgray;
 }
 
