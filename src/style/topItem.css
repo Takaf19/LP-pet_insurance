@@ -7,17 +7,18 @@
 }
 
 .container__massage {
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 3vw 0 1vw 0;
 }
 
 .container__massage h1 {
-  margin-bottom: 2vw;
   font-size: 3vw;
   padding: 1vw 0;
   position: relative;
   z-index: 1;
-  color: rgb(49, 47, 47);
+  color: white;
+  text-shadow: 2px 2px darkorange;
+  box-shadow: 0px 3px 3px gray;
 }
 .container__massage h1::before {
   content: "";
@@ -26,12 +27,12 @@
   left: 0;
   right: 0;
   margin: 0 auto;
-  height: 100%;
+  height: 80%;
   width: 0;
   z-index: -1;
-  border-top: 3px solid orange;
-  border-bottom: 3px solid orange;
-  background-color: rgba(250, 250, 81, 0.973);
+  border-top: 2vw double orange;
+  border-bottom: 6vw solid orange;
+  /* background-color: rgba(250, 250, 81, 0.973); */
   -webkit-animation: borderline 1s linear;
   animation: borderline 1s linear;
   -webkit-animation-fill-mode: forwards;
@@ -56,13 +57,13 @@
   position: absolute;
   top: 0;
   right: 0;
-  left: 0;
+  left: 10px;
   bottom: 0;
   width: 90%;
   height: 90%;
   z-index: 2;
-  margin: auto;
-  box-shadow: 0px 0px 3px 5px rgba(211, 211, 211, 0.616);
+  margin: auto 0;
+  box-shadow: 0px 0px 10px 5px rgba(188, 240, 252, 0.616);
 }
 
 .container__massage--imgbox::after {
@@ -70,23 +71,23 @@
   position: absolute;
   top: 0;
   right: 0;
-  left: 0;
+  left: 10px;
   bottom: 0;
   width: 90%;
   height: 90%;
-  margin: auto;
+  margin: auto 0;
   background-image: url(../image/top-dog.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
   filter: brightness(80%);
-  box-shadow: -3vw -2vw 0 0.5vw rgba(11, 41, 65, 0.7);;
+  /* box-shadow: 0 0 0 2vw rgba(6, 143, 255, 0.7);; */
 }
 
 .container__massage--coments {
   position: absolute;
-   bottom: 2%;
+   bottom: -5%;
    right: 2%;
   margin: 0 auto;
   width: 40%;
@@ -110,7 +111,7 @@
     width: 50%;
   }
   100% {
-    width: 70%;
+    width: 100%;
   }
 }
 
