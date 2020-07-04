@@ -12,7 +12,8 @@ class App extends React.Component {
     super(props)
     this.state = {
         currentPosition: 0,
-        test: null
+        test: null,
+        timeoutId: 0
     }
   }
   // 1度目のrenderが呼ばれた後に1度だけ呼ばれるメソッド
@@ -27,38 +28,38 @@ class App extends React.Component {
   }
 
   watchCurrentPosition(target) {
-    // ターゲットの高さ
-    let t_height = target.offsetHeight
-    // スクリーン上部からターゲットまでの距離
-    let offsetY = target.getBoundingClientRect().top;
-    // screen-height
-    let screenHeight = window.outerHeight;
-    // スクリーン下部からターゲットまでの距離
-    let t_position = offsetY - screenHeight;
+    // setTimeout()がセットされていたら処理を行わない
+	  if ( this.state.timeoutId ) return ;
+    
+    // 指定した秒数ごとに処理を実施
+    this.state.timeoutId = setTimeout( function () {
+      this.state.timeoutId = 0;
+      // 処理内容
+      // ターゲットの高さ
+      let t_height = target.offsetHeight
+      // スクリーン上部からターゲットまでの距離
+      let offsetY = target.getBoundingClientRect().top;
+      // screen-height
+      let screenHeight = window.outerHeight;
+      // スクリーン下部からターゲットまでの距離
+      let t_position = offsetY - screenHeight;
 
-    /*
-     * 1. -screenHeight <= (t_position + t_height ) : スクリーン上部とターゲットの下部までの距離
-     *    ※マイナスなのは、スクリーン内に入るとt_positionはマイナスになるため
-     *    
-     * 2. t_position < 0 : スクリーン下部からターゲットまでの距離が、0未満 => スクリーン内に到達
-     * 　
-     */
-    // 画面内の場合
-    if(-screenHeight<=(t_position　+　t_height) && t_position<0) {
-　　   console.log("ok");
-    } else { // 画面外
-       console.log("No");
-    }
-    console.log(this.scrollTop());
+      /*
+      * 1. -screenHeight <= (t_position + t_height ) : スクリーン上部とターゲットの下部までの距離
+      *    ※マイナスなのは、スクリーン内に入るとt_positionはマイナスになるため
+      *    
+      * 2. t_position < 0 : スクリーン下部からターゲットまでの距離が、0未満 => スクリーン内に到達
+      * 　
+      */
+      // 画面内の場合
+      if(-screenHeight<=(t_position　+　t_height) && t_position<0) {
+  　　   console.log("ok");
+      } else { // 画面外
+        console.log("No");
+      }
+    }.bind(this), 500 );
   }
 
-  scrollTop() {
-    return Math.max(
-        window.pageYOffset,
-        document.documentElement.scrollTop,
-        document.body.scrollTop
-    )
-  }
   render() {
     return (
       <>
@@ -66,7 +67,7 @@ class App extends React.Component {
           <img src={Dog} />
         </div>
         <div className="top-sp">
-          <div className="background-massage animate__animated fadeInUp">
+          <div className="background-massage animate__animated animate__fadeInUp">
               <p>わが子の未来のために。</p>
               <p>ペット保険は</p>
               <p>AniLIFE</p>
