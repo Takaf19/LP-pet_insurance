@@ -18,7 +18,6 @@
   z-index: 1;
   color: white;
   text-shadow: 2px 2px darkorange;
-  box-shadow: 0px 3px 3px gray;
 }
 .container__massage h1::before {
   content: "";
@@ -32,7 +31,7 @@
   z-index: -1;
   border-top: 2vw double orange;
   border-bottom: 6vw solid orange;
-  /* background-color: rgba(250, 250, 81, 0.973); */
+  box-shadow: 0px 3px 3px gray;
   -webkit-animation: borderline 1s linear;
   animation: borderline 1s linear;
   -webkit-animation-fill-mode: forwards;
@@ -52,19 +51,6 @@
   position: relative;
 }
 
-.container__massage--imgbox::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 10px;
-  bottom: 0;
-  width: 90%;
-  height: 90%;
-  z-index: 2;
-  margin: auto 0;
-  box-shadow: 0px 0px 10px 5px rgba(188, 240, 252, 0.616);
-}
 
 .container__massage--imgbox::after {
   content: "";
