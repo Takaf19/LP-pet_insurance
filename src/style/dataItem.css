@@ -118,10 +118,9 @@ h2 {
   height: 25vw;
   border-radius: 50%;
   background-image: linear-gradient(to right, transparent 50%, #fe8a01 0); 
-
 }
 
-.pie::before{ 
+.pie.active::before{ 
   content: '';
   display: block;
   margin-left: 50%;
@@ -138,7 +137,7 @@ h2 {
   animation-fill-mode: forwards;
 }
 
-.pie::after{ 
+.pie.active::after{ 
   content: ''; 
   position: absolute;
     top: 0;

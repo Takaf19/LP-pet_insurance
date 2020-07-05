@@ -79,3 +79,8 @@
   margin: 10vw auto 0;
   background: rgb(255, 254, 254);
 }
+
+/* アニメーションのスタイル */
+.invisible {
+  visibility: hidden;
+}
