@@ -11,15 +11,16 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-        currentPosition: 0,
-        test: null,
+        animations: null,
         timeoutId: 0
     }
   }
   // 1度目のrenderが呼ばれた後に1度だけ呼ばれるメソッド
   componentDidMount() {
-    this.state.test = document.getElementById("a");
-    window.addEventListener('scroll', event => this.watchCurrentPosition(this.state.test), true)
+    let target = document.getElementsByClassName("animation");
+    // HTMLCollectionを配列に変換
+    this.state.animations = Array.from( target ) ;
+    window.addEventListener('scroll', event => this.watchCurrentPosition(this.state.animations), true)
   }
   // コンポーネントを破棄する直前に呼ばれるメソッド
   // メモリの解放を行う。
@@ -36,28 +37,40 @@ class App extends React.Component {
       this.state.timeoutId = 0;
       // 処理内容
       // ターゲットの高さ
-      let t_height = target.offsetHeight
-      // スクリーン上部からターゲットまでの距離
-      let offsetY = target.getBoundingClientRect().top;
-      // screen-height
-      let screenHeight = window.outerHeight;
-      // スクリーン下部からターゲットまでの距離
-      let t_position = offsetY - screenHeight;
+      target.map(function( val ) {
+        let t_height = val.offsetHeight
+        // スクリーン上部からターゲットまでの距離
+        let offsetY = val.getBoundingClientRect().top;
+        // screen-height
+        let screenHeight = window.outerHeight;
+        // スクリーン下部からターゲットまでの距離
+        let t_position = offsetY - screenHeight;
+  
+        /*
+        * 1. -screenHeight <= (t_position + t_height ) : スクリーン上部とターゲットの下部までの距離
+        *    ※マイナスなのは、スクリーン内に入るとt_positionはマイナスになるため
+        *    
+        * 2. t_position < 0 : スクリーン下部からターゲットまでの距離が、0未満 => スクリーン内に到達
+        * 　
+        */
+        // 画面内の場合
+        if(-screenHeight<=(t_position　+　t_height) && t_position<0) {
+          val.classList.add(this.addClass(val));
+        } else { // 画面外
+          console.log("No");
+        }
+      }.bind(this));
+    }.bind(this), 300 );
+  }
 
-      /*
-      * 1. -screenHeight <= (t_position + t_height ) : スクリーン上部とターゲットの下部までの距離
-      *    ※マイナスなのは、スクリーン内に入るとt_positionはマイナスになるため
-      *    
-      * 2. t_position < 0 : スクリーン下部からターゲットまでの距離が、0未満 => スクリーン内に到達
-      * 　
-      */
-      // 画面内の場合
-      if(-screenHeight<=(t_position　+　t_height) && t_position<0) {
-  　　   console.log("ok");
-      } else { // 画面外
-        console.log("No");
-      }
-    }.bind(this), 500 );
+  addClass(target) {
+    if(target.classList.contains("animation")) {
+      return "active"
+    } else if(target.classList.contains("fadeIn")) {
+      return "animate__fadeIn"
+    } else if(target.classList.contains("slideinRight")) {
+      return "animate__fadeIn"
+    }
   }
 
   render() {
@@ -75,11 +88,9 @@ class App extends React.Component {
         </div>
         <div className="main">
           <TopItem></TopItem>
-          <p id="a">Scroll Top: {this.state.currentPosition}</p>
           <DataItem></DataItem>
           <Like></Like>
         </div>
-        <p className=".animate__animated fadeInUp">aa</p>
         <Footer></Footer>
       </>
     );
