@@ -12,7 +12,7 @@ export default class TopItem extends Component {
   render() {
     return (
       <div className="dataItem fadeInUp">
-        <div className="container-item container__massage">
+        <div className="container-item container__massage animation">
           <h1>大切な家族の<span>"万が一"</span>に備える</h1>
           <div className="container__massage--main">
             <div className="container__massage--imgbox"></div>
@@ -25,7 +25,7 @@ export default class TopItem extends Component {
           </div>
         </div>
         <span className="border"></span>
-        <div className="container-item container--items">
+        <div className="container-item container--items animate__animated slideinRight">
           <h1>選ばれる <span>3</span>つのポイント!</h1>
           <div className="point">
             <div className="point--item">

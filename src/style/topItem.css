@@ -17,9 +17,24 @@
   position: relative;
   z-index: 1;
   color: white;
-  text-shadow: 2px 2px darkorange;
+  opacity: 0;
 }
-.container__massage h1::before {
+
+.container__massage.animation.active h1 {
+  -webkit-animation: fadein 1s linear;
+  animation: fadein 1s linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  50%{
+    opacity: 0.5;
+  }100% {
+    opacity: 1;
+    text-shadow: 2px 2px darkorange;
+  }
+}
+.container__massage.animation.active h1::before {
   content: "";
   position: absolute;
   bottom: 0;
