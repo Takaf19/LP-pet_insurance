@@ -13,7 +13,7 @@ export default class Dataitem extends Component {
 
   render() {
     return (
-      <div className="data-item">
+      <div className="invisible data-item animation fadeIn animate__animated">
         <div className="data-item--title">
           <p>2頭に1頭が</p>
           <p>加入後<span>1年以内</span>に保険を利用！！</p>
@@ -28,7 +28,7 @@ export default class Dataitem extends Component {
             </div>
             <div className="data-item__massage--imgbox">
               <div className="back-graph"></div>
-              <div className="pie"></div>
+              <div className="pie animation"></div>
               <div className="pie-percent">
                   <span>65%</span>
               </div>

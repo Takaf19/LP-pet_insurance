@@ -25,7 +25,7 @@ export default class TopItem extends Component {
           </div>
         </div>
         <span className="border"></span>
-        <div className="container-item container--items animate__animated slideinRight">
+        <div className="invisible container-item container--items  animation slideInRight animate__animated">
           <h1>選ばれる <span>3</span>つのポイント!</h1>
           <div className="point">
             <div className="point--item">
@@ -52,7 +52,7 @@ export default class TopItem extends Component {
           </div>
         </div>
 
-        <div className="container-item container--product">
+        <div className="invisible container-item container--product animation slideInLeft animate__animated">
           <h1>我が子に合わせて選べる <span>2</span>つの商品</h1>
           <div className="product">
             <div className="product-item" id="product1">

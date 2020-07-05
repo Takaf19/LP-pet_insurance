@@ -56,6 +56,9 @@ class App extends React.Component {
         // 画面内の場合
         if(-screenHeight<=(t_position　+　t_height) && t_position<0) {
           val.classList.add(this.addClass(val));
+          if(val.classList.contains("invisible")) {
+            val.classList.remove('invisible');
+          }
         } else { // 画面外
           console.log("No");
         }
@@ -64,12 +67,14 @@ class App extends React.Component {
   }
 
   addClass(target) {
-    if(target.classList.contains("animation")) {
+    if(target.classList.contains("fadeIn")) {
+      return "animate__fadeIn"
+    } else if(target.classList.contains("slideInRight")) {
+      return "animate__slideInRight"
+    } else if(target.classList.contains("slideInLeft")) {
+      return "animate__slideInLeft"
+    } else {
       return "active"
-    } else if(target.classList.contains("fadeIn")) {
-      return "animate__fadeIn"
-    } else if(target.classList.contains("slideinRight")) {
-      return "animate__fadeIn"
     }
   }
 
