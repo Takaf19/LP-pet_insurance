@@ -55,10 +55,10 @@ class App extends React.Component {
         *    ※マイナスなのは、スクリーン内に入るとt_positionはマイナスになるため
         *    
         * 2. t_position < 0 : スクリーン下部からターゲットまでの距離が、0未満 => スクリーン内に到達
-        * 　
+        * 
         */
-        // 画面内の場合
-        if(-screenHeight<=(t_position　+　t_height) && t_position<0) {
+        /* 画面内の場合 */
+        if(-screenHeight<=(t_position + t_height) && t_position<0) {
           val.classList.add(this.addClass(val));
           if(val.classList.contains("invisible")) {
             val.classList.remove('invisible');
@@ -115,5 +115,4 @@ class App extends React.Component {
   }
 }
 
-// Appクラスをエクスポートしてください
 export default App;
