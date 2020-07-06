@@ -48,7 +48,6 @@ export default class Dataitem extends Component {
               exp[0].style.display = "none";
               exp[0].style.height = "";
               message[messageId] = !message[messageId];
-              // exp[0].classList.add("active");
           }
         }, 10);
       }
@@ -57,7 +56,7 @@ export default class Dataitem extends Component {
       <div className="like">
         <div className="like--title">
             <p>加入していてよかった！</p>
-            <p>
+            <p className="invisible animation fadeInUp animate__animated">
               <FontAwesomeIcon icon={faGift} />
                ご契約社様の<span>喜びの声</span>
                <FontAwesomeIcon icon={faGift} />

@@ -1,6 +1,8 @@
 import React from 'react';
 import './style/App.css';
 import Dog from './image/dog.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import TopItem from './components/topItem';
 import DataItem from './components/dataItem';
 import Like from './components/like';
@@ -11,16 +13,18 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+        root: null,
         animations: null,
         timeoutId: 0
     }
   }
   // 1度目のrenderが呼ばれた後に1度だけ呼ばれるメソッド
   componentDidMount() {
+    this.state.root = document.getElementById("root");
     let target = document.getElementsByClassName("animation");
     // HTMLCollectionを配列に変換
     this.state.animations = Array.from( target ) ;
-    window.addEventListener('scroll', event => this.watchCurrentPosition(this.state.animations), true)
+    window.addEventListener('scroll', event => this.watchCurrentPosition(this.state.animations), true);
   }
   // コンポーネントを破棄する直前に呼ばれるメソッド
   // メモリの解放を行う。
@@ -65,10 +69,11 @@ class App extends React.Component {
       }.bind(this));
     }.bind(this), 300 );
   }
-
   addClass(target) {
     if(target.classList.contains("fadeIn")) {
       return "animate__fadeIn"
+    } else if(target.classList.contains("fadeInUp")) {
+      return "animate__fadeInUp"
     } else if(target.classList.contains("slideInRight")) {
       return "animate__slideInRight"
     } else if(target.classList.contains("slideInLeft")) {
@@ -78,9 +83,19 @@ class App extends React.Component {
     }
   }
 
+  topscroll(){
+    this.state.root.scroll({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
   render() {
     return (
       <>
+        <div id="topBtn" onClick={this.topscroll.bind(this)}>
+          <FontAwesomeIcon icon={faChevronUp} />
+        </div>
         <div className="background">
           <img src={Dog} />
         </div>
