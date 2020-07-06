@@ -63,8 +63,6 @@ class App extends React.Component {
           if(val.classList.contains("invisible")) {
             val.classList.remove('invisible');
           }
-        } else { // 画面外
-          console.log("No");
         }
       }.bind(this));
     }.bind(this), 300 );
