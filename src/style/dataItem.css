@@ -14,13 +14,6 @@ h2 {
 .data-item__massage {
   overflow: hidden;
 }
-.border {
-  display: inline-block;
-  width: 90%;
-  height: 1px;
-  background: slategrey;
-  margin: 3vw 0 2vw;
-}
 
 .data-item--title {
   padding: 2.5vw 0;
@@ -177,6 +170,8 @@ h2 {
 
 .pie-percent > span {
   font-size: 4vw;
+  color: #fe8a01;
+  text-shadow: 1px 1px rgb(252, 182, 118);
 }
 
 @keyframes rotate1 {

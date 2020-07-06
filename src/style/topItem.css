@@ -1,13 +1,8 @@
-.container {
-  padding: 5vh 0;
-}
-
 .container-item {
   margin-bottom: 5%;
 }
 
 .container__massage {
-  /* overflow: hidden; */
   padding: 3vw 0 1vw 0;
 }
 
@@ -47,8 +42,8 @@
   border-top: 2vw double orange;
   border-bottom: 6vw solid orange;
   box-shadow: 0px 3px 3px gray;
-  -webkit-animation: borderline 1s linear;
-  animation: borderline 1s linear;
+  -webkit-animation: borderline 0.5s linear;
+  animation: borderline 0.5s linear;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -83,7 +78,6 @@
   background-size: cover;
   z-index: 1;
   filter: brightness(80%);
-  /* box-shadow: 0 0 0 2vw rgba(6, 143, 255, 0.7);; */
 }
 
 .container__massage--coments {

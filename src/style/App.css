@@ -5,6 +5,42 @@
   overflow: scroll;
 }
 
+#topBtn{
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  z-index: 999;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(83, 186, 255, 0.7);
+  box-shadow: 0 0 1px 0 gray;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#topBtn > svg {
+  margin-top: 20%;
+  font-size: 25px;
+}
+
+#topBtn:hover > svg{
+  -webkit-animation: topbtn 0.5s linear infinite;
+  animation: topbtn 0.5s linear infinite;
+}
+
+@keyframes topbtn {
+  40% {
+    margin-top: 21%;
+  } 
+  50% {
+    margin-top: 15%;
+  } 
+  100% {
+    margin-top: 20%;
+  }
+}
+
 .background {
   height: 100%;
   width: 100%;
@@ -20,42 +56,38 @@
   margin: 0 auto;
   display: inline-block;
   line-height: 1;
-  padding-top: 20vh;
+  padding-top: 25vh;
   position: relative;
 }
 
 .background-massage p {
-  font-size: 4vh;
+  font-size: 2rem;
   font-weight: 700;
-  margin: 0;
 }
 
 .background-massage p:nth-child(2) {
-  position: relative;
   display: inline-block;
   background-color: gold;
   color: rgb(52, 52, 53);
-  margin: 3vh auto 0;
-  padding: 1vh 8vh;
-  font-size: 3vh;
+  margin: 5% auto 0;
+  padding: 1% 10%;
+  font-size: 1.4rem;
   border-top: 3px dotted blue;
   border-bottom: 3px dotted blue;
 }
 
 
 .background-massage p:nth-child(3) {
-  position: absolute;
-    left: -20vh;
-    right: 0;
-    bottom: -20vh;
   font-family: 'Titan One', cursive;
+  margin: 0 auto;
   color: rgba(6, 158, 74, 0.89);
-  font-size: 20vh;
+  font-size: 8rem;
+  line-height: 8rem;
   text-shadow: 1vh 1vh rgba(240, 139, 206, 0.856);
 }
 
 .background-massage p:nth-child(3):first-letter{
-  font-size: 25vh;
+  font-size: 10rem;
 }
 
 
@@ -70,17 +102,65 @@
 }
 
 .top-sp {
-  height: 80%;
+  height: 95%;
   width: 100%;
 }
 
 .main {
-  padding: 5vw;
-  margin: 10vw auto 0;
+  padding: 5vw 0;
+  margin: 0 auto;
   background: rgb(255, 254, 254);
+  box-shadow: 0px 2px 5px 3px gray;
+}
+
+.border {
+  display: inline-block;
+  width: 90%;
+  height: 1px;
+  background: slategrey;
+  margin: 3vw 0 5vw;
 }
 
 /* アニメーションのスタイル */
 .invisible {
   visibility: hidden;
+}
+
+@media screen and (min-width: 749px) {
+  .main {
+    padding: 5vw;
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+
+  .background {
+    height: 120vw;
+  }
+
+  .top-sp {
+    height: 120vw;
+  }
+
+  .background-massage {
+    padding-top: 25vw;
+  }
+
+  .background-massage p {
+    font-size: 5vw;
+  }
+  
+  .background-massage p:nth-child(2) {
+    font-size:4vw;
+  }
+  
+  
+  .background-massage p:nth-child(3) {
+    font-size: 20vw;
+    line-height: 20vw;
+  }
+  .background-massage p:nth-child(3):first-letter{
+    font-size: 30vw;
+  }
 }
