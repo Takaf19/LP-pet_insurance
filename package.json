@@ -14,13 +14,10 @@
     "react-dom": "^16.13.1",
     "react-genie": "^0.2.2",
     "react-scripts": "3.4.1",
-    "react-scroll": "^1.7.16",
-    "serve": "^11.3.2"
+    "react-scroll": "^1.7.16"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "heroku-postbuild": "npm run build",
-    "start": "serve -s build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
