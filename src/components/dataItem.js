@@ -15,7 +15,7 @@ export default class Dataitem extends Component {
     return (
       <div className="invisible data-item animation fadeIn animate__animated">
         <div className="data-item--title">
-          <p>2頭に1頭が</p>
+          <p>2頭に1頭がaa</p>
           <p>加入後<span>1年以内</span>に保険を利用！！</p>
         </div>
         <div className="data-item--item data-item__massage">
