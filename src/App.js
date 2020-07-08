@@ -99,7 +99,7 @@ class App extends React.Component {
         </div>
         <div className="top-sp">
           <div className="background-massage animate__animated animate__fadeInUp">
-              <p>わが子の未来のために。</p>
+              <p>わが子の未来のために。aa</p>
               <p>ペット保険は</p>
               <p>AniLIFE</p>
           </div>
